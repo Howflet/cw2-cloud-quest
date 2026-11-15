@@ -7,6 +7,11 @@ and complete the challenge once to earn **10 points + a badge**.
 - **Firebase:** Auth, Firestore, Cloud Functions, run on the local emulators
 - **Pathway:** Undergraduate
 
+> **Why emulators?** The assignment says to use emulators for the reward flow. My Firebase
+> account has no shared course project, and my own project is on the free Spark plan, which
+> can't deploy Cloud Functions (they need the paid Blaze plan). So everything runs on the
+> Firebase Emulator Suite under a local demo project (`demo-cloud-quest`).
+
 ## How to run
 
 ```bash
