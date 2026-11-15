@@ -1,0 +1,10 @@
+ok 1 - completeToday rejects signed-out callers
+ok 2 - completeToday awards 10 points + badge once; retry does not duplicate
+ok 3 - rules deny direct client reward writes and cross-user reads
+ok 4 - askQuestCoach requires auth and a non-blank question of at most 300 chars
+ok 5 - coach grounds its hint in the caller's own state and ignores a client-supplied uid
+ok 6 - Signal Check: adversarial request discloses nothing and changes nothing
+ok 7 - coach returns an error, not an invented hint, when its tool or model fails
+# tests 7
+# pass 7
+# fail 0

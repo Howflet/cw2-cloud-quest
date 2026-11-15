@@ -1,0 +1,13 @@
+{
+  "name": "cloud-quest-tooling",
+  "private": true,
+  "description": "Local Firebase CLI for the Cloud Quest emulators (npx firebase ...)",
+  "scripts": {
+    "emulators": "firebase emulators:start --only auth,firestore,functions",
+    "seed": "node functions/scripts/seed.js",
+    "test:emulator": "firebase emulators:exec --only auth,firestore,functions \"node functions/scripts/seed.js && node --test functions/test/boundary.test.js\""
+  },
+  "devDependencies": {
+    "firebase-tools": "^15.36.0"
+  }
+}

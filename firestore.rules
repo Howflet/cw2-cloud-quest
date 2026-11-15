@@ -1,0 +1,21 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // One shared, read-only challenge. Only the seed script (Admin SDK) writes it.
+    match /challenges/{challengeId} {
+      allow read: if request.auth != null;
+      allow write: if false;
+    }
+    // Private learner progress. Learners may read only their own document;
+    // reward fields are written only by the trusted completeToday Function.
+    match /users/{userId}/progress/{progressId} {
+      allow read: if request.auth != null
+        && request.auth.uid == userId;
+      allow write: if false;
+    }
+    // Optional push extension (not implemented): tokens stay server-managed.
+    match /users/{userId}/devices/{deviceId} {
+      allow read, write: if false;
+    }
+  }
+}

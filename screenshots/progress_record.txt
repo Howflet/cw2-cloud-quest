@@ -1,0 +1,1 @@
+users/o59l0F3GAgXagJ3MeuW3UB5ipMyh/progress/today {"completed": {"booleanValue": true}, "points": {"integerValue": "10"}, "badgeId": {"stringValue": "first-quest"}, "completedAt": {"timestampValue": "2026-11-15T00:00:58.869Z"}}
